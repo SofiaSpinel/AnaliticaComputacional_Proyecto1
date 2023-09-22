@@ -35,5 +35,16 @@ print(data.isnull().sum()) #Datos flatantes?
 
 #Lo estoy editando 
 
+plt.subplot(1, 2, 1)
+sns.histplot(data['Age at enrollment'], bins=20, kde=True)
+plt.title('Distribución de Edades')
+
+plt.figure(figsize=(8, 6))
+sns.boxplot(y=data['Admission grade'])
+plt.title('Boxplot de la variable "grade"')
+plt.ylabel('Calificación')
+plt.show()
+
+
 
 
